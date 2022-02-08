@@ -1,30 +1,26 @@
 <script>
-	export let name;
+	let feedback = [
+		{
+			id:1,
+			rating:10,
+			text: 'Incididunt labore officia duis consectetur duis qui consequat ullamco consequat sunt ad. Labore culpa tempor esse labore cupidatat. Nisi cupidatat aliquip reprehenderit ipsum eu aliqua eiusmod officia ipsum exercitation. Sunt adipisicing eiusmod in pariatur ipsum nisi ut dolore nulla. Irure eiusmod esse pariatur elit. Minim qui laborum in elit Lorem anim laboris ullamco ea dolor ut proident. Id laborum laborum dolor fugiat.'
+		},
+		{
+			id:2,
+			rating:9,
+			text:'Voluptate sit laborum commodo cupidatat eu quis est. Reprehenderit aliqua tempor qui laborum labore culpa consequat id eiusmod esse sint irure magna qui. Veniam dolor ea consequat ex ullamco velit consequat adipisicing veniam non. Nisi cillum ea est sint laboris duis laborum pariatur voluptate id culpa. Non excepteur ex irure sit nulla id exercitation. Qui elit mollit incididunt exercitation velit cillum ipsum proident aute fugiat. Dolore do nisi reprehenderit labore dolor est proident est dolore nostrud adipisicing.'
+		},
+		{
+			id:3,
+			rating:9,
+			text:'Pariatur Lorem cillum irure dolore deserunt ea. Nisi dolore exercitation adipisicing tempor cillum in. Qui id aliquip eiusmod deserunt do proident ad et excepteur aliqua occaecat adipisicing sit.'
+		}
+	]
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h1>Hello</h1>
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
 </style>
