@@ -17,10 +17,15 @@
 			text:'Pariatur Lorem cillum irure dolore deserunt ea. Nisi dolore exercitation adipisicing tempor cillum in. Qui id aliquip eiusmod deserunt do proident ad et excepteur aliqua occaecat adipisicing sit.'
 		}
 	]
+
+	const deleteFeedback = (e) => {
+		let itemId = e.detail;
+		feedback = feedback.filter(item=> item.id != itemId);
+	}
 </script>
 
 <main>
-	<FeedbackList {feedback}/>
+	<FeedbackList {feedback} on:delete-feedback={deleteFeedback}/>
 </main>
 
 <style>
