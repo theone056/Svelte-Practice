@@ -14,7 +14,7 @@
     <div class="item-rating">
         {item.rating}
     </div>
-    <div class="item-close" on:click= {()=> Handledelete(item.id)}>X</div>
+    <button class="item-close" on:click= {()=> Handledelete(item.id)}>X</button>
     <div class="item-text">
         {item.text}
     </div>
@@ -41,5 +41,7 @@
         top: 5px;
         right: 10px;
         cursor: pointer;
+        background: none;
+        border: none;
     }
 </style>

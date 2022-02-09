@@ -13,10 +13,13 @@
 		},
 		{
 			id:3,
-			rating:9,
+			rating:8,
 			text:'Pariatur Lorem cillum irure dolore deserunt ea. Nisi dolore exercitation adipisicing tempor cillum in. Qui id aliquip eiusmod deserunt do proident ad et excepteur aliqua occaecat adipisicing sit.'
 		}
 	]
+
+	$: count = feedback.length;
+	$: average = feedback.reduce((prev,{rating})=>prev + rating,0)/feedback.length;
 
 	const deleteFeedback = (e) => {
 		let itemId = e.detail;
@@ -24,7 +27,7 @@
 	}
 </script>
 
-<main>
+<main class="container">
 	<FeedbackList {feedback} on:delete-feedback={deleteFeedback}/>
 </main>
 
