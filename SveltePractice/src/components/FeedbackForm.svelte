@@ -1,7 +1,7 @@
 <script>
     import Button from "./Button.svelte";
     import Card from "./Card.svelte";
-
+    import RatingSelect from './RatingSelect.svelte';
     let text = '';
     let disabledButton = true;
     let min = 10;
@@ -26,6 +26,7 @@
     </header>
     <form action="">
         <div class="input-group">
+            <RatingSelect/>
             <input type="text" on:input={InputHandler} bind:value={text} placeholder="Tell us something that keeps you coming back">
             <Button disabled={disabledButton} type='submit'>Send</Button>
         </div>
@@ -53,7 +54,7 @@
         width: 100%;
         max-width: 600px;
         border: 1px solid #C3C3E4;
-        border-radius: 8px;
+        border-radius: 10px;
         padding: 15px;
     }
 </style>
