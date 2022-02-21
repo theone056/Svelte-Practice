@@ -1,11 +1,14 @@
 <script>
+    import {v4 as uuidv4} from "uuid";
     import Button from "./Button.svelte";
     import Card from "./Card.svelte";
     import RatingSelect from './RatingSelect.svelte';
     let text = '';
     let disabledButton = true;
+    let rating = 10;
     let min = 10;
     let message = '';
+    const HandleSelect = e => rating = e.detail;
     const InputHandler = () =>{
         if(text.trim().length <=min)
         {
@@ -17,16 +20,26 @@
             disabledButton = false;
         }
     }
-
+    const HandleSubmit = () => {
+        if(text.trim().length > min)
+        {
+            const newfeedback = {
+                id:uuidv4(),
+                text,
+                rating: rating
+            }
+            console.log(newfeedback);
+        }
+    }
 </script>
 
 <Card>
     <header>
         <h3>How would you rate your service ?</h3>
     </header>
-    <form action="">
+    <form on:submit|preventDefault={HandleSubmit}>
         <div class="input-group">
-            <RatingSelect/>
+            <RatingSelect on:onSelectRating={HandleSelect}/>
             <input type="text" on:input={InputHandler} bind:value={text} placeholder="Tell us something that keeps you coming back">
             <Button disabled={disabledButton} type='submit'>Send</Button>
         </div>
